@@ -358,7 +358,7 @@ const void_funptr_t PROGMEM _kb_layout_press[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
                   // right hand
                   lpop2,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
-                  NULL,	NULL,	kprrel,	kprrel,	kprrel,	NULL,
+                  NULL,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,
@@ -593,7 +593,7 @@ const void_funptr_t PROGMEM _kb_layout_release[KB_LAYERS][KB_ROWS][KB_COLUMNS] =
                   // right hand
                   NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
-                  NULL,	NULL,	kprrel,	kprrel,	kprrel,	NULL,
+                  NULL,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,	kprrel,	kprrel,	NULL,
                   NULL,	NULL,
