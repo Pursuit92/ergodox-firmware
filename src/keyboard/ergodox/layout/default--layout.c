@@ -71,19 +71,19 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
                   _backslash,	_Q,	_W,	_E,	_R,	_T,	1,
                   _tab,	_A,	_S,	_D,	_F,	_G,
                   _shiftL,	_Z,	_X,	_C,	_V,	_B,	1,
-                  _guiL,	_grave,	_backslash,	_arrowL,	_arrowR,
-                  _ctrlL,	_altL,
-                  0,	0,	_home,
-                  _bs,	_del,	_end,
+                  _guiL,	_arrowL,	_insert,	_arrowR,	_grave,
+                  _home,	_end,
+                  0,	0,	_altL,
+                  _bs,	_del,	_ctrlL,
                   // right hand
                   2,	_6,	_7,	_8,	_9,	_0,	_dash,
                   _bracketL,	_Y,	_U,	_I,	_O,	_P,	_bracketR,
                   _H,	_J,	_K,	_L,	_semicolon,	_quote,
                   1,	_N,	_M,	_comma,	_period,	_slash,	_shiftR,
                   _arrowL,	_arrowD,	_arrowU,	_arrowR,	_guiR,
-                  _altR,	_ctrlR,
-                  _pageU,	0,	0,
-                  _pageD,	_enter,	_space
+                  _pageD,	_pageU,
+                  _altR,	0,	0,
+                  _ctrlR,	_enter,	_space
                   ),
   // LAYER 1
   KB_MATRIX_LAYER(
@@ -115,7 +115,7 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
                   // left hand
                   0,	0,	0,	0,	0,	0,	0,
                   0,	0,	3,	0,	0,	0,	0,
-                  0,	0,	0,	0,	0,	0,
+                  0,	0,	0,	0,	0,	5,
                   0,	0,	0,	4,	0,	0,	0,
                   0,	0,	0,	0,	0,
                   0,	0,
@@ -188,16 +188,16 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
                   0,	0,	0,	0,	0,
                   0,	0,
                   0,	0,	0,
-                  0,	0,	0,
+                  _space,	_enter,	0,
                   // right hand
-                  0,	0,	0,	0,	0,	0,	0,
+                  2,	0,	0,	0,	0,	0,	0,
                   0,	0,	0,	0,	0,	0,	0,
                   0,	0,	0,	0,	0,	0,
                   0,	0,	0,	0,	0,	0,	0,
                   0,	0,	0,	0,	0,
                   0,	0,
                   0,	0,	0,
-                  0,	0,	0
+                  0,	_del,	_bs
                   ),
   // LAYER 6
   KB_MATRIX_LAYER(
@@ -349,7 +349,7 @@ const void_funptr_t PROGMEM _kb_layout_press[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
                   // left hand
                   dbtldr,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
                   NULL,	lpop,	lpop,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+                  NULL,	NULL,	NULL,	NULL,	NULL,	lpop,
                   NULL,	NULL,	NULL,	lpop,	NULL,	NULL,	NULL,
                   NULL,	NULL,	NULL,	NULL,	NULL,
                   NULL,	NULL,
@@ -416,23 +416,23 @@ const void_funptr_t PROGMEM _kb_layout_press[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
                   // unused
                   NULL,
                   // left hand
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,
-                  NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,
+                  kprrel,	kprrel,	ktrans,
                   // right hand
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,
-                  NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL
+                  lpush2,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,
+                  ktrans,	kprrel,	kprrel
                   ),
   // LAYER 6
   KB_MATRIX_LAYER(
@@ -584,7 +584,7 @@ const void_funptr_t PROGMEM _kb_layout_release[KB_LAYERS][KB_ROWS][KB_COLUMNS] =
                   // left hand
                   NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
                   NULL,	NULL,	lpush3,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+                  NULL,	NULL,	NULL,	NULL,	NULL,	lpush5,
                   NULL,	NULL,	NULL,	lpush4,	NULL,	NULL,	NULL,
                   NULL,	NULL,	NULL,	NULL,	NULL,
                   NULL,	NULL,
@@ -651,23 +651,23 @@ const void_funptr_t PROGMEM _kb_layout_release[KB_LAYERS][KB_ROWS][KB_COLUMNS] =
                   // unused
                   NULL,
                   // left hand
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,
-                  NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,
+                  kprrel,	kprrel,	ktrans,
                   // right hand
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL,	NULL,	NULL,
-                  NULL,	NULL,
-                  NULL,	NULL,	NULL,
-                  NULL,	NULL,	NULL
+                  NULL,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,	ktrans,	ktrans,
+                  ktrans,	ktrans,
+                  ktrans,	ktrans,	ktrans,
+                  ktrans,	kprrel,	kprrel
                   ),
   // LAYER 6
   KB_MATRIX_LAYER(
