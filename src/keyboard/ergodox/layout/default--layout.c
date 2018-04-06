@@ -176,7 +176,7 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
                   0,	0,	0,
                   0,	0,	0
                   ),
-  // LAYER 5
+  // LAYER 5 - games: swap space/enter and bs/del
   KB_MATRIX_LAYER(
                   // unused
                   0,
